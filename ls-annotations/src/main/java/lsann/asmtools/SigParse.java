@@ -1,4 +1,4 @@
-package lsann;
+package lsann.asmtools;
 
 import java.util.*;
 
@@ -29,7 +29,7 @@ public class SigParse {
         int pos;
     }
 
-    public void parseFuncSigToList(LinkedList<String> paramList, String functionSig) {
+    public static void parseFuncSigToList(LinkedList<String> paramList, String functionSig) {
         PosParse pos = new PosParse(functionSig);
         parseFuncToListImpl(paramList, pos);
         if (!pos.isEof()) {
@@ -37,7 +37,7 @@ public class SigParse {
         }
     }
 
-    public String parseFuncSig(String functionSig, String functionName) {
+    public static String parseFuncSig(String functionSig, String functionName) {
         PosParse pos = new PosParse(functionSig);
         StringBuffer parsedVal = new StringBuffer();
         parseFunc(parsedVal, pos, functionName);
@@ -48,9 +48,7 @@ public class SigParse {
         return new String(parsedVal);
     }
 
-
-
-    public String parseTypeSig(String typeSig) {
+    public static String parseTypeSig(String typeSig) {
         PosParse pos = new PosParse(typeSig);
         StringBuffer parsedVal = new StringBuffer();
         parseType(parsedVal, pos);
@@ -61,7 +59,8 @@ public class SigParse {
 
         return new String(parsedVal);
     }
-    private void parseFuncToListImpl(LinkedList<String> paramList, PosParse pos) {
+
+    private static void parseFuncToListImpl(LinkedList<String> paramList, PosParse pos) {
         if (pos.at(0) != '(') {
             throw new IllegalArgumentException("function type signature should start with (");
         }
@@ -81,7 +80,7 @@ public class SigParse {
         paramList.addFirst(new String(desc));
     }
 
-    private void parseFunc(StringBuffer parsedVal, PosParse pos, String functionName) {
+    private static void parseFunc(StringBuffer parsedVal, PosParse pos, String functionName) {
         if (pos.at(0) != '(') {
             throw new IllegalArgumentException("function type signature should start with (");
         }
@@ -107,7 +106,7 @@ public class SigParse {
         parsedVal.append(desc);
     }
 
-    private void parseType(StringBuffer parsedVal, PosParse pos) {
+    private static void parseType(StringBuffer parsedVal, PosParse pos) {
         String desc = "";
 
         if (isBasicType(pos.at(0))) {
@@ -123,7 +122,7 @@ public class SigParse {
         pos.movePos(1);
     }
 
-    private void parseArrayType(StringBuffer parsedVal, PosParse pos) {
+    private static void parseArrayType(StringBuffer parsedVal, PosParse pos) {
         String suffix = "";
         while(isArrayPrefix(pos.at(0))) {
             suffix += "[]";
@@ -135,11 +134,11 @@ public class SigParse {
         pos.movePos(-1);
     }
 
-    private boolean isArrayPrefix(char ch) {
+    private static boolean isArrayPrefix(char ch) {
         return ch == '[';
     }
 
-    private void parseFullyQualified(StringBuffer parsedVal, PosParse pos) {
+    private static void parseFullyQualified(StringBuffer parsedVal, PosParse pos) {
         String desc = "";
         char ch;
 
@@ -153,11 +152,11 @@ public class SigParse {
         }
     }
 
-    private boolean isFullyQualifiedPrefix(char ch) {
+    private static boolean isFullyQualifiedPrefix(char ch) {
         return ch == 'L';
     }
 
-    private boolean isBasicType(char ch) {
+    private static boolean isBasicType(char ch) {
         switch (ch) {
             case 'Z':
             case 'B':
@@ -174,7 +173,7 @@ public class SigParse {
         }
     }
 
-    private String basicTypeDesc(char ch) {
+    private static String basicTypeDesc(char ch) {
         switch(ch) {
             case 'Z':
                 return "boolean";

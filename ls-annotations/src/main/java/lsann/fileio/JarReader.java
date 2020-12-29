@@ -1,4 +1,4 @@
-package lsann;
+package lsann.fileio;
 
 import java.io.*;
 import java.util.zip.*;
@@ -6,9 +6,7 @@ import java.util.*;
 import java.nio.file.Paths;
 import java.nio.file.Files;
 
-
-class JarUtil {
-
+public class JarReader {
     static private class PathName {
         private LinkedList<String> names = new LinkedList<String>();
         private String displayPath = "";
@@ -42,11 +40,11 @@ class JarUtil {
     private PathName filePath = new PathName();
     boolean scanJarsRecursive;
 
-    public JarUtil(boolean scanJarsRecursive) {
+    public JarReader(boolean scanJarsRecursive) {
         this.scanJarsRecursive = scanJarsRecursive;
     }
 
-    public void process(ZipInputStream zip, VisitClassinJar visitor) throws java.io.IOException{
+    public void process(ZipInputStream zip, JarClassVisitor visitor) throws java.io.IOException{
         for (ZipEntry entry = zip.getNextEntry(); entry != null; entry = zip.getNextEntry()) {
             if (!entry.isDirectory()) {
                 if (entry.getName().endsWith(".class")) {
@@ -63,13 +61,13 @@ class JarUtil {
         }
     }
 
-    private void processJar(String path, VisitClassinJar visitor) throws java.io.IOException{
-            filePath.add(path);
-            ZipInputStream zip = new ZipInputStream(new FileInputStream(path));
-            process(zip, visitor);
-            filePath.pop();
+    private void processJar(String path, JarClassVisitor visitor) throws java.io.IOException{
+        filePath.add(path);
+        ZipInputStream zip = new ZipInputStream(new FileInputStream(path));
+        process(zip, visitor);
+        filePath.pop();
     }
-    public void process(String fpath, VisitClassinJar visitor) throws java.io.IOException{
+    public void process(String fpath, JarClassVisitor visitor) throws java.io.IOException{
         File f = new File(fpath);
 
         if (!f.exists()) {
@@ -98,7 +96,7 @@ class JarUtil {
                     ex.printStackTrace();
                 }
             });
-         }
+        }
     }
 
     private String zipPathToClassName(String entryName) {

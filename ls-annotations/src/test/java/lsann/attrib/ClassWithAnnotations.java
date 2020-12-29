@@ -1,4 +1,4 @@
-package lsann;
+package lsann.attrib;
 
 import java.util.*;
 import org.springframework.boot.autoconfigure.*;
@@ -13,14 +13,20 @@ import org.springframework.stereotype.Component;
 //Disclaimer: these annotations usages make no sense at all
 @SpringBootApplication(scanBasePackages = "com.max.b2c.*")
 @ComponentScan(
-        basePackages = { "arg.a", "org.b" },
+        basePackages = {
+                "arg.a",
+                "org.b" },
         excludeFilters = {
-                @Filter(type = FilterType.CUSTOM, classes = ClassWithAnnotations.class),
-                @Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) })
+                @Filter(
+                        type = FilterType.CUSTOM,
+                        classes = ClassWithAnnotations.class),
+                @Filter(
+                        type = FilterType.CUSTOM,
+                        classes = AutoConfigurationExcludeFilter.class) })
 public class ClassWithAnnotations {
 
     @Bean
-    ClassWithAnnotations outgoingMessageBuilderFactory(
+    public ClassWithAnnotations outgoingMessageBuilderFactory(
             @Autowired List<String> aaa,
             @Value("${external.s3.region}") String regionName,
             @Value("${external.s3.bucket}") String bucketName,

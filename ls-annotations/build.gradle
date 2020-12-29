@@ -30,7 +30,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'lsann.App'
+    mainClass = 'lsann.cmd.App'
 }
 
 // added to include dependencies in output jar.
@@ -38,7 +38,7 @@ application {
 
 jar {
   manifest { 
-    attributes "Main-Class": 'lsann.App'
+    attributes "Main-Class": 'lsann.cmd.App'
   }  
 
   from {

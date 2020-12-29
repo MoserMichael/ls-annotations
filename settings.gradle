@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'ls-annotations'
-include('app')
+include('ls-annotations')

@@ -1,0 +1,22 @@
+## ls-annotation
+
+ls-annotation is a java bytecode decompiler; it extracts and prints definitions of classes and methods that use java annotations.
+
+The purpose of this tool is to make sense out of declarations with annotations that depend on one another, an example for such things is @Autowire from spring-boot.
+In spring boot a function or constructor parameter that is marked with @Autowire will get the value returned by a function marked with the @Bean annotation, provided that this function
+returns the same type or a derived class as that of the parameter type marked with @Autowire.
+
+The motivation for this tool is to extract all classes/methods that have an annotation - and do so based on the bytecode of a system. I think that searching through the bytecode is very effective way to look at complex java based systems; Searching through the source code is much more limited, often one is faced with the problem of chasing multiple dependencies and their versions (and one might have to do so across multiple source code repositories); one doesn't have this problem when looking at the complete binary byte code representation of a given system.
+
+
+## Installation 
+
+Download ls-annotation.jar from the [release page](https://github.com/MoserMichael/ls-annotations/releases/)
+
+you need JDK version 8 to run this program.
+
+## Usage
+
+ls-annotation is a command line utility;
+
+
