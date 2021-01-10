@@ -51,7 +51,7 @@ ${help}
 <summary>${help}</summary>
 Command line: java -jar ls-annotations.jar ${cmd}
 
-```java
+```javascript
 EOF
 
   sed -i -e 's/<b>/@b@/g'      tmp-file
