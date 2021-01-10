@@ -19,6 +19,9 @@ EOF
   cat <<EOF >>README.md
 
 </pre>
+
+## Examples
+
 EOF
 
 }
