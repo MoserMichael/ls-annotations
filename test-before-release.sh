@@ -7,7 +7,6 @@ add_tmp_to_readme() {
 }
 
 make_usage() {
-  $JAVA_HOME/bin/java -jar ./ls-annotations/build/libs/ls-annotations.jar -h >tmp-file 2>&1 || true
 
   cat <<EOF >>README.md
 ## Command line options
@@ -51,7 +50,6 @@ ${help}
 <details>
 <summary>${help}</summary>
 Command line: java -jar ls-annotations.jar ${cmd}
-<pre>
 
 EOF
 
@@ -60,12 +58,11 @@ EOF
   sed -i -e 's/</\&lt;/g'      tmp-file
   sed -i -e 's/>/\&gt;/g'      tmp-file
   sed -i -e 's/@b@/<b>/g'      tmp-file
-  sed -i -e 's/@\/b@/<\/b>/g'   tmp-file
-  
+  sed -i -e 's/@\/b@/<\/b>/g'  tmp-file
+  sed -i -e 's/^/    /g'       tmp-file
   cat tmp-file >>README.md
 
   cat <<EOF >>README.md
-</pre>  
 </details>
 EOF
 }

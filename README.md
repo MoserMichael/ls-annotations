@@ -63,48 +63,46 @@ show all annotations in jar file
 <details>
 <summary>show all annotations in jar file</summary>
 Command line: java -jar ls-annotations.jar -l ./ls-annotations/build/libs/ls-annotations.jar
-<pre>
 
-File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/ClassReader.class
-
-public class org.objectweb.asm.ClassReader{
-
-    @java.lang.Deprecated
-    public final deprecated byte[] b;}
-
-File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/ClassWriter.class
-
-public class org.objectweb.asm.ClassWriter
-  extends org.objectweb.asm.ClassVisitor{
-
-    @java.lang.Deprecated
-    public deprecated int newHandle(int,java.lang.String,java.lang.String,java.lang.String);
-}
-
-File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/Handle.class
-
-public final class org.objectweb.asm.Handle{
-
-    @java.lang.Deprecated
-    public deprecated &lt;init&gt;(int,java.lang.String,java.lang.String,java.lang.String);
-}
-
-File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/MethodVisitor.class
-
-public abstract class org.objectweb.asm.MethodVisitor{
-
-    @java.lang.Deprecated
-    public deprecated void visitMethodInsn(int,java.lang.String,java.lang.String,java.lang.String);
-}
-
-File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/Opcodes.class
-
-public abstract interface org.objectweb.asm.Opcodes{
-
-    @java.lang.Deprecated
-    public static final deprecated int ASM10_EXPERIMENTAL = 17432576;}
-
-</pre>  
+    File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/ClassReader.class
+    
+    public class org.objectweb.asm.ClassReader{
+    
+        @java.lang.Deprecated
+        public final deprecated byte[] b;}
+    
+    File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/ClassWriter.class
+    
+    public class org.objectweb.asm.ClassWriter
+      extends org.objectweb.asm.ClassVisitor{
+    
+        @java.lang.Deprecated
+        public deprecated int newHandle(int,java.lang.String,java.lang.String,java.lang.String);
+    }
+    
+    File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/Handle.class
+    
+    public final class org.objectweb.asm.Handle{
+    
+        @java.lang.Deprecated
+        public deprecated &lt;init&gt;(int,java.lang.String,java.lang.String,java.lang.String);
+    }
+    
+    File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/MethodVisitor.class
+    
+    public abstract class org.objectweb.asm.MethodVisitor{
+    
+        @java.lang.Deprecated
+        public deprecated void visitMethodInsn(int,java.lang.String,java.lang.String,java.lang.String);
+    }
+    
+    File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/Opcodes.class
+    
+    public abstract interface org.objectweb.asm.Opcodes{
+    
+        @java.lang.Deprecated
+        public static final deprecated int ASM10_EXPERIMENTAL = 17432576;}
+    
 </details>
     
 <hr>
@@ -112,129 +110,127 @@ show all annotations in classes within directory (recursive)
 <details>
 <summary>show all annotations in classes within directory (recursive)</summary>
 Command line: java -jar ls-annotations.jar -l ./ls-annotations/build/classes
-<pre>
 
-File: ./ls-annotations/build/classes/java/test/lsann/AppTest.class
-
-public class lsann.AppTest{
-
-    @org.junit.Test
-    public void testScanAnnotations();
-
-
-    @org.junit.Test
-    public void testShowDerived();
-
-
-    @org.junit.Test
-    public void testAnnotationUsage();
-}
-
-File: ./ls-annotations/build/classes/java/test/lsann/attrib/ClassWithAnnotations.class
-
-
-@org.springframework.boot.autoconfigure.SpringBootApplication(
-    scanBasePackages={
-        "com.max.b2c.*"})
-@org.springframework.context.annotation.ComponentScan(
-    basePackages={
-        "arg.a",
-        "org.b"},
-    excludeFilters={
-        @org.springframework.context.annotation.ComponentScan$Filter(
-                type=org.springframework.context.annotation.FilterType.CUSTOM,
-                classes={
-                    lsann.attrib.ClassWithAnnotations.class}),
-        @org.springframework.context.annotation.ComponentScan$Filter(
-                type=org.springframework.context.annotation.FilterType.CUSTOM,
-                classes={
-                    org.springframework.boot.autoconfigure.AutoConfigurationExcludeFilter.class})})
-public class lsann.attrib.ClassWithAnnotations{
-
-    @org.springframework.context.annotation.Bean
-    public lsann.attrib.ClassWithAnnotations outgoingMessageBuilderFactory(
-            @org.springframework.beans.factory.annotation.Autowired
-            java.util.List,
-            @org.springframework.beans.factory.annotation.Value(
-                value="${external.s3.region}")
-            java.lang.String,
-            @org.springframework.beans.factory.annotation.Value(
-                value="${external.s3.bucket}")
-            java.lang.String,
-            @org.springframework.beans.factory.annotation.Value(
-                value="${external.s3.min-message-size-bytes}")
-            int,
-            @org.springframework.beans.factory.annotation.Value(
-                value="${external.s3.upload-part-size-bytes}")
-            int);
-}
-
-File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestDerived2.class
-
-public class lsann.attrib.TestDerived2
-  extends lsann.attrib.TestDerivedClass{
-
+    File: ./ls-annotations/build/classes/java/test/lsann/AppTest.class
+    
+    public class lsann.AppTest{
+    
+        @org.junit.Test
+        public void testScanAnnotations();
+    
+    
+        @org.junit.Test
+        public void testShowDerived();
+    
+    
+        @org.junit.Test
+        public void testAnnotationUsage();
+    }
+    
+    File: ./ls-annotations/build/classes/java/test/lsann/attrib/ClassWithAnnotations.class
+    
+    
+    @org.springframework.boot.autoconfigure.SpringBootApplication(
+        scanBasePackages={
+            "com.max.b2c.*"})
+    @org.springframework.context.annotation.ComponentScan(
+        basePackages={
+            "arg.a",
+            "org.b"},
+        excludeFilters={
+            @org.springframework.context.annotation.ComponentScan$Filter(
+                    type=org.springframework.context.annotation.FilterType.CUSTOM,
+                    classes={
+                        lsann.attrib.ClassWithAnnotations.class}),
+            @org.springframework.context.annotation.ComponentScan$Filter(
+                    type=org.springframework.context.annotation.FilterType.CUSTOM,
+                    classes={
+                        org.springframework.boot.autoconfigure.AutoConfigurationExcludeFilter.class})})
+    public class lsann.attrib.ClassWithAnnotations{
+    
+        @org.springframework.context.annotation.Bean
+        public lsann.attrib.ClassWithAnnotations outgoingMessageBuilderFactory(
+                @org.springframework.beans.factory.annotation.Autowired
+                java.util.List,
+                @org.springframework.beans.factory.annotation.Value(
+                    value="${external.s3.region}")
+                java.lang.String,
+                @org.springframework.beans.factory.annotation.Value(
+                    value="${external.s3.bucket}")
+                java.lang.String,
+                @org.springframework.beans.factory.annotation.Value(
+                    value="${external.s3.min-message-size-bytes}")
+                int,
+                @org.springframework.beans.factory.annotation.Value(
+                    value="${external.s3.upload-part-size-bytes}")
+                int);
+    }
+    
+    File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestDerived2.class
+    
+    public class lsann.attrib.TestDerived2
+      extends lsann.attrib.TestDerivedClass{
+    
+        @lsann.attrib.TestAttrib4
+         java.lang.String member;
+        @lsann.attrib.TestAttrib4
+        public void setMe(java.lang.String);
+    }
+    
+    File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestAttrib.class
+    
+    public @interface lsann.attrib.TestAttrib
+      implements java.lang.annotation.Annotation{
+        public abstract java.lang.String name();
+    }
+    
+    File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestBaseClass.class
+    
+    
     @lsann.attrib.TestAttrib4
-     java.lang.String member;
-    @lsann.attrib.TestAttrib4
-    public void setMe(java.lang.String);
-}
-
-File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestAttrib.class
-
-public @interface lsann.attrib.TestAttrib
-  implements java.lang.annotation.Annotation{
-    public abstract java.lang.String name();
-}
-
-File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestBaseClass.class
-
-
-@lsann.attrib.TestAttrib4
-public class lsann.attrib.TestBaseClass{
-}
-
-File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestAttrib4.class
-
-
-@lsann.attrib.TestAttrib2
-public @interface lsann.attrib.TestAttrib4
-  implements java.lang.annotation.Annotation{
-}
-
-File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestAttrib2.class
-
-
-@lsann.attrib.TestAttrib(
-    name="kuku")
-public @interface lsann.attrib.TestAttrib2
-  implements java.lang.annotation.Annotation{
-}
-
-File: ./ls-annotations/build/classes/java/test/lsann/attrib/ClassWithAnnotations$NestedClass$NestedLevelTwoClass.class
-
-
-@org.springframework.stereotype.Component
-public class lsann.attrib.ClassWithAnnotations$NestedClass$NestedLevelTwoClass{
-}
-
-File: ./ls-annotations/build/classes/java/test/lsann/attrib/ClassWithAnnotations$NestedClass.class
-
-
-@org.springframework.stereotype.Component
-public class lsann.attrib.ClassWithAnnotations$NestedClass{
-}
-
-File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestAttrib3.class
-
-
-@lsann.attrib.TestAttrib(
-    name="kuku")
-public @interface lsann.attrib.TestAttrib3
-  implements java.lang.annotation.Annotation{
-}
-
-</pre>  
+    public class lsann.attrib.TestBaseClass{
+    }
+    
+    File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestAttrib4.class
+    
+    
+    @lsann.attrib.TestAttrib2
+    public @interface lsann.attrib.TestAttrib4
+      implements java.lang.annotation.Annotation{
+    }
+    
+    File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestAttrib2.class
+    
+    
+    @lsann.attrib.TestAttrib(
+        name="kuku")
+    public @interface lsann.attrib.TestAttrib2
+      implements java.lang.annotation.Annotation{
+    }
+    
+    File: ./ls-annotations/build/classes/java/test/lsann/attrib/ClassWithAnnotations$NestedClass$NestedLevelTwoClass.class
+    
+    
+    @org.springframework.stereotype.Component
+    public class lsann.attrib.ClassWithAnnotations$NestedClass$NestedLevelTwoClass{
+    }
+    
+    File: ./ls-annotations/build/classes/java/test/lsann/attrib/ClassWithAnnotations$NestedClass.class
+    
+    
+    @org.springframework.stereotype.Component
+    public class lsann.attrib.ClassWithAnnotations$NestedClass{
+    }
+    
+    File: ./ls-annotations/build/classes/java/test/lsann/attrib/TestAttrib3.class
+    
+    
+    @lsann.attrib.TestAttrib(
+        name="kuku")
+    public @interface lsann.attrib.TestAttrib3
+      implements java.lang.annotation.Annotation{
+    }
+    
 </details>
     
 <hr>
@@ -242,27 +238,25 @@ show all annotation definitions that are used in definition of annotation @lsann
 <details>
 <summary>show all annotation definitions that are used in definition of annotation @lsann.attrib.TestAttrib4</summary>
 Command line: java -jar ls-annotations.jar -e @lsann.attrib.TestAttrib4 ./ls-annotations/build/classes
-<pre>
 
-
-@lsann.attrib.TestAttrib2
-public @interface lsann.attrib.TestAttrib4
-  implements java.lang.annotation.Annotation{
-}
-
-
-@lsann.attrib.TestAttrib(
-    name="kuku")
-public @interface lsann.attrib.TestAttrib2
-  implements java.lang.annotation.Annotation{
-}
-
-public @interface lsann.attrib.TestAttrib
-  implements java.lang.annotation.Annotation{
-    public abstract java.lang.String name();
-}
-
-</pre>  
+    
+    @lsann.attrib.TestAttrib2
+    public @interface lsann.attrib.TestAttrib4
+      implements java.lang.annotation.Annotation{
+    }
+    
+    
+    @lsann.attrib.TestAttrib(
+        name="kuku")
+    public @interface lsann.attrib.TestAttrib2
+      implements java.lang.annotation.Annotation{
+    }
+    
+    public @interface lsann.attrib.TestAttrib
+      implements java.lang.annotation.Annotation{
+        public abstract java.lang.String name();
+    }
+    
 </details>
     
 <hr>
@@ -270,34 +264,32 @@ show all annotation definitions that extend annotation @lsann.attrib.TestAttrib
 <details>
 <summary>show all annotation definitions that extend annotation @lsann.attrib.TestAttrib</summary>
 Command line: java -jar ls-annotations.jar -a @lsann.attrib.TestAttrib ./ls-annotations/build/classes
-<pre>
 
-public @interface lsann.attrib.TestAttrib
-  implements java.lang.annotation.Annotation{
-    public abstract java.lang.String name();
-}
-
-
-@lsann.attrib.TestAttrib(
-    name="kuku")
-public @interface lsann.attrib.TestAttrib2
-  implements java.lang.annotation.Annotation{
-}
-
-
-@lsann.attrib.TestAttrib2
-public @interface lsann.attrib.TestAttrib4
-  implements java.lang.annotation.Annotation{
-}
-
-
-@lsann.attrib.TestAttrib(
-    name="kuku")
-public @interface lsann.attrib.TestAttrib3
-  implements java.lang.annotation.Annotation{
-}
-
-</pre>  
+    public @interface lsann.attrib.TestAttrib
+      implements java.lang.annotation.Annotation{
+        public abstract java.lang.String name();
+    }
+    
+    
+    @lsann.attrib.TestAttrib(
+        name="kuku")
+    public @interface lsann.attrib.TestAttrib2
+      implements java.lang.annotation.Annotation{
+    }
+    
+    
+    @lsann.attrib.TestAttrib2
+    public @interface lsann.attrib.TestAttrib4
+      implements java.lang.annotation.Annotation{
+    }
+    
+    
+    @lsann.attrib.TestAttrib(
+        name="kuku")
+    public @interface lsann.attrib.TestAttrib3
+      implements java.lang.annotation.Annotation{
+    }
+    
 </details>
     
 <hr>
@@ -305,23 +297,21 @@ show all uses of @lsann.attrib.TestAttrib4 with highlight
 <details>
 <summary>show all uses of @lsann.attrib.TestAttrib4 with highlight</summary>
 Command line: java -jar ls-annotations.jar -u @lsann.attrib.TestAttrib4 ./ls-annotations/build/classes
-<pre>
 
-public class lsann.attrib.TestDerived2
-  extends lsann.attrib.TestDerivedClass{
-
+    public class lsann.attrib.TestDerived2
+      extends lsann.attrib.TestDerivedClass{
+    
+        <b>@lsann.attrib.TestAttrib4</b>
+         java.lang.String member;
+        <b>@lsann.attrib.TestAttrib4</b>
+        public void setMe(java.lang.String);
+    }
+    
+    
     <b>@lsann.attrib.TestAttrib4</b>
-     java.lang.String member;
-    <b>@lsann.attrib.TestAttrib4</b>
-    public void setMe(java.lang.String);
-}
-
-
-<b>@lsann.attrib.TestAttrib4</b>
-public class lsann.attrib.TestBaseClass{
-}
-
-</pre>  
+    public class lsann.attrib.TestBaseClass{
+    }
+    
 </details>
     
 <hr>
@@ -329,48 +319,46 @@ show all uses of @lsann.attrib.TestAttrib4, including use of derived annotations
 <details>
 <summary>show all uses of @lsann.attrib.TestAttrib4, including use of derived annotations </summary>
 Command line: java -jar ls-annotations.jar -w @lsann.attrib.TestAttrib ./ls-annotations/build/classes
-<pre>
 
-public @interface lsann.attrib.TestAttrib
-  implements java.lang.annotation.Annotation{
-    public abstract java.lang.String name();
-}
-
-
-@lsann.attrib.TestAttrib(
-    name="kuku")
-public @interface lsann.attrib.TestAttrib2
-  implements java.lang.annotation.Annotation{
-}
-
-
-@lsann.attrib.TestAttrib2
-public @interface lsann.attrib.TestAttrib4
-  implements java.lang.annotation.Annotation{
-}
-
-public class lsann.attrib.TestDerived2
-  extends lsann.attrib.TestDerivedClass{
-
+    public @interface lsann.attrib.TestAttrib
+      implements java.lang.annotation.Annotation{
+        public abstract java.lang.String name();
+    }
+    
+    
+    @lsann.attrib.TestAttrib(
+        name="kuku")
+    public @interface lsann.attrib.TestAttrib2
+      implements java.lang.annotation.Annotation{
+    }
+    
+    
+    @lsann.attrib.TestAttrib2
+    public @interface lsann.attrib.TestAttrib4
+      implements java.lang.annotation.Annotation{
+    }
+    
+    public class lsann.attrib.TestDerived2
+      extends lsann.attrib.TestDerivedClass{
+    
+        <b>@lsann.attrib.TestAttrib4</b>
+         java.lang.String member;
+        <b>@lsann.attrib.TestAttrib4</b>
+        public void setMe(java.lang.String);
+    }
+    
+    
     <b>@lsann.attrib.TestAttrib4</b>
-     java.lang.String member;
-    <b>@lsann.attrib.TestAttrib4</b>
-    public void setMe(java.lang.String);
-}
-
-
-<b>@lsann.attrib.TestAttrib4</b>
-public class lsann.attrib.TestBaseClass{
-}
-
-
-@lsann.attrib.TestAttrib(
-    name="kuku")
-public @interface lsann.attrib.TestAttrib3
-  implements java.lang.annotation.Annotation{
-}
-
-</pre>  
+    public class lsann.attrib.TestBaseClass{
+    }
+    
+    
+    @lsann.attrib.TestAttrib(
+        name="kuku")
+    public @interface lsann.attrib.TestAttrib3
+      implements java.lang.annotation.Annotation{
+    }
+    
 </details>
     
 <hr>
@@ -378,73 +366,71 @@ show all derived classes of java.lang.Object
 <details>
 <summary>show all derived classes of java.lang.Object</summary>
 Command line: java -jar ls-annotations.jar -l ./ls-annotations/build/classes -d java.lang.Object
-<pre>
 
-java.lang.Object
-    lsann.AllJarClassVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@300ffa5d
-    lsann.AllJarClassVisitors$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1f17ae12
-    lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@4d405ef7
-    lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowAnnotationUsage lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
-    lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowUsageRecursive lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e817b38
-    lsann.AppTest lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@c4437c4
-    lsann.AstDefinition lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@433c675d
-    lsann.AstDefinition$AnnotationBaseRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3f91beef
-        lsann.AstDefinition$AnnotationCompoundRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1a6c5a9e
-            lsann.AstDefinition$AnnotationArrayRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@37bba400
-            lsann.AstDefinition$AnnotationRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@179d3b25
-                lsann.AstDefinition$AnnotationNestedRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@254989ff
-        lsann.AstDefinition$AnnotationEnumValRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5d099f62
-        lsann.AstDefinition$AnnotationValueRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@37f8bb67
-    lsann.AstDefinition$RepBase lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@49c2faae
-        lsann.AstDefinition$ClassRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@20ad9418
-        lsann.AstDefinition$FieldRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@31cefde0
-        lsann.AstDefinition$MethodParamRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@439f5b3d
-        lsann.AstDefinition$MethodRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1d56ce6a
-    lsann.AstVisitorEvents lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5197848c
-        lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$AnnoDeclGraphAstVisitorEvents lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@17f052a3
-        lsann.AllJarClassVisitors$LsAnnotationJarClassVisitor$LsAstVisitorEvents lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e0fa5d3
-    lsann.ClassHierarchyAsmClassVisitor$ClassEntryData lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5010be6
-    lsann.SpringBootAutowireAnalyser lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@685f4c2e
-    lsann.asmtools.AsmAccessNames lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@7daf6ecc
-    lsann.asmtools.AsmAccessNames$Entry lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e5d6d97
-    lsann.asmtools.SigParse lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@238e0d81
-    lsann.asmtools.SigParse$PosParse lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@31221be2
-    lsann.asmtools.TracingVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@377dca04
-    lsann.attrib.ClassWithAnnotations lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@728938a9
-    lsann.attrib.ClassWithAnnotations$NestedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@21b8d17c
-    lsann.attrib.ClassWithAnnotations$NestedClass$NestedLevelTwoClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6433a2
-    lsann.attrib.TestAttrib lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5910e440
-    lsann.attrib.TestAttrib2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6267c3bb
-    lsann.attrib.TestAttrib3 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@533ddba
-    lsann.attrib.TestAttrib4 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@246b179d
-    lsann.attrib.TestBaseClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@7a07c5b4
-        lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@26a1ab54
-            lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3d646c37
-    lsann.attrib.TestInterface lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@41cf53f9
-        lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@26a1ab54
-            lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3d646c37
-    lsann.cmd.App lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5a10411
-    lsann.fileio.JarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2ef1e4fa
-        lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@306a30c7
-        lsann.AllJarClassVisitors$ClassHierarchyJarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@b81eda8
-        lsann.AllJarClassVisitors$LsAnnotationJarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@68de145
-        lsann.cmd.App$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@27fa135a
-    lsann.fileio.JarReader lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@46f7f36a
-    lsann.fileio.JarReader$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@421faab1
-    lsann.fileio.JarReader$PathName lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2b71fc7e
-    lsann.graph.HierarchyGraph lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5ce65a89
-    lsann.graph.HierarchyGraph$Entry lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@25f38edc
-    lsann.graph.HierarchyGraph$HierarchyGraphVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1a86f2f1
+    java.lang.Object
+        lsann.AllJarClassVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@300ffa5d
+        lsann.AllJarClassVisitors$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1f17ae12
         lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@4d405ef7
         lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowAnnotationUsage lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
         lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowUsageRecursive lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e817b38
+        lsann.AppTest lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@c4437c4
+        lsann.AstDefinition lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@433c675d
+        lsann.AstDefinition$AnnotationBaseRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3f91beef
+            lsann.AstDefinition$AnnotationCompoundRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1a6c5a9e
+                lsann.AstDefinition$AnnotationArrayRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@37bba400
+                lsann.AstDefinition$AnnotationRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@179d3b25
+                    lsann.AstDefinition$AnnotationNestedRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@254989ff
+            lsann.AstDefinition$AnnotationEnumValRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5d099f62
+            lsann.AstDefinition$AnnotationValueRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@37f8bb67
+        lsann.AstDefinition$RepBase lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@49c2faae
+            lsann.AstDefinition$ClassRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@20ad9418
+            lsann.AstDefinition$FieldRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@31cefde0
+            lsann.AstDefinition$MethodParamRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@439f5b3d
+            lsann.AstDefinition$MethodRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1d56ce6a
+        lsann.AstVisitorEvents lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5197848c
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$AnnoDeclGraphAstVisitorEvents lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@17f052a3
+            lsann.AllJarClassVisitors$LsAnnotationJarClassVisitor$LsAstVisitorEvents lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e0fa5d3
+        lsann.ClassHierarchyAsmClassVisitor$ClassEntryData lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5010be6
+        lsann.SpringBootAutowireAnalyser lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@685f4c2e
+        lsann.asmtools.AsmAccessNames lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@7daf6ecc
+        lsann.asmtools.AsmAccessNames$Entry lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e5d6d97
+        lsann.asmtools.SigParse lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@238e0d81
+        lsann.asmtools.SigParse$PosParse lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@31221be2
+        lsann.asmtools.TracingVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@377dca04
+        lsann.attrib.ClassWithAnnotations lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@728938a9
+        lsann.attrib.ClassWithAnnotations$NestedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@21b8d17c
+        lsann.attrib.ClassWithAnnotations$NestedClass$NestedLevelTwoClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6433a2
+        lsann.attrib.TestAttrib lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5910e440
+        lsann.attrib.TestAttrib2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6267c3bb
+        lsann.attrib.TestAttrib3 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@533ddba
+        lsann.attrib.TestAttrib4 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@246b179d
+        lsann.attrib.TestBaseClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@7a07c5b4
+            lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@26a1ab54
+                lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3d646c37
+        lsann.attrib.TestInterface lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@41cf53f9
+            lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@26a1ab54
+                lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3d646c37
+        lsann.cmd.App lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5a10411
+        lsann.fileio.JarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2ef1e4fa
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@306a30c7
+            lsann.AllJarClassVisitors$ClassHierarchyJarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@b81eda8
+            lsann.AllJarClassVisitors$LsAnnotationJarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@68de145
+            lsann.cmd.App$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@27fa135a
+        lsann.fileio.JarReader lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@46f7f36a
+        lsann.fileio.JarReader$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@421faab1
+        lsann.fileio.JarReader$PathName lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2b71fc7e
+        lsann.graph.HierarchyGraph lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5ce65a89
+        lsann.graph.HierarchyGraph$Entry lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@25f38edc
+        lsann.graph.HierarchyGraph$HierarchyGraphVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1a86f2f1
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@4d405ef7
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowAnnotationUsage lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowUsageRecursive lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e817b38
+            lsann.graph.HierarchyGraphVisitors$ShowHierarchyVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3eb07fd3
+        lsann.graph.HierarchyGraph$LinkEntry lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@506c589e
+        lsann.graph.HierarchyGraphVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@69d0a921
         lsann.graph.HierarchyGraphVisitors$ShowHierarchyVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3eb07fd3
-    lsann.graph.HierarchyGraph$LinkEntry lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@506c589e
-    lsann.graph.HierarchyGraphVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@69d0a921
-    lsann.graph.HierarchyGraphVisitors$ShowHierarchyVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3eb07fd3
-    lsann.util.Pair lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@446cdf90
-    lsann.util.StrUtil lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@799f7e29
-</pre>  
+        lsann.util.Pair lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@446cdf90
+        lsann.util.StrUtil lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@799f7e29
 </details>
     
 <hr>
@@ -452,13 +438,11 @@ show all base classes of lsann.attrib.TestDerived2
 <details>
 <summary>show all base classes of lsann.attrib.TestDerived2</summary>
 Command line: java -jar ls-annotations.jar -l ./ls-annotations/build/classes -b lsann.attrib.TestDerived2
-<pre>
 
-lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@79fc0f2f
-    lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1f17ae12
-        lsann.attrib.TestBaseClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@4d405ef7
-            java.lang.Object
-        lsann.attrib.TestInterface lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
-            java.lang.Object
-</pre>  
+    lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@79fc0f2f
+        lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1f17ae12
+            lsann.attrib.TestBaseClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@4d405ef7
+                java.lang.Object
+            lsann.attrib.TestInterface lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
+                java.lang.Object
 </details>
