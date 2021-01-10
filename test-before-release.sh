@@ -51,7 +51,7 @@ ${help}
 <summary>${help}</summary>
 Command line: java -jar ls-annotations.jar ${cmd}
 
-<code>
+```java
 EOF
 
   sed -i -e 's/<b>/@b@/g'      tmp-file
@@ -64,7 +64,7 @@ EOF
   cat tmp-file >>README.md
 
   cat <<EOF >>README.md
-</code>  
+```
 </details>
 EOF
 }

@@ -57,14 +57,6 @@ Commands:
 
 
 </pre>
-    
-<hr>
-show all annotations in jar file
-<details>
-<summary>show all annotations in jar file</summary>
-Command line: java -jar ls-annotations.jar -l ./ls-annotations/build/libs/ls-annotations.jar
-
-<code>
 File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/ClassReader.class
 
 public class org.objectweb.asm.ClassReader{
@@ -104,16 +96,6 @@ public abstract interface org.objectweb.asm.Opcodes{
     @java.lang.Deprecated
     public static final deprecated int ASM10_EXPERIMENTAL = 17432576;}
 
-</code>  
-</details>
-    
-<hr>
-show all annotations in classes within directory (recursive)
-<details>
-<summary>show all annotations in classes within directory (recursive)</summary>
-Command line: java -jar ls-annotations.jar -l ./ls-annotations/build/classes
-
-<code>
 File: ./ls-annotations/build/classes/java/test/lsann/AppTest.class
 
 public class lsann.AppTest{
@@ -234,16 +216,6 @@ public @interface lsann.attrib.TestAttrib3
   implements java.lang.annotation.Annotation{
 }
 
-</code>  
-</details>
-    
-<hr>
-show all annotation definitions that are used in definition of annotation @lsann.attrib.TestAttrib4
-<details>
-<summary>show all annotation definitions that are used in definition of annotation @lsann.attrib.TestAttrib4</summary>
-Command line: java -jar ls-annotations.jar -e @lsann.attrib.TestAttrib4 ./ls-annotations/build/classes
-
-<code>
 
 @lsann.attrib.TestAttrib2
 public @interface lsann.attrib.TestAttrib4
@@ -262,16 +234,6 @@ public @interface lsann.attrib.TestAttrib
     public abstract java.lang.String name();
 }
 
-</code>  
-</details>
-    
-<hr>
-show all annotation definitions that extend annotation @lsann.attrib.TestAttrib
-<details>
-<summary>show all annotation definitions that extend annotation @lsann.attrib.TestAttrib</summary>
-Command line: java -jar ls-annotations.jar -a @lsann.attrib.TestAttrib ./ls-annotations/build/classes
-
-<code>
 public @interface lsann.attrib.TestAttrib
   implements java.lang.annotation.Annotation{
     public abstract java.lang.String name();
@@ -297,16 +259,6 @@ public @interface lsann.attrib.TestAttrib3
   implements java.lang.annotation.Annotation{
 }
 
-</code>  
-</details>
-    
-<hr>
-show all uses of @lsann.attrib.TestAttrib4 with highlight
-<details>
-<summary>show all uses of @lsann.attrib.TestAttrib4 with highlight</summary>
-Command line: java -jar ls-annotations.jar -u @lsann.attrib.TestAttrib4 ./ls-annotations/build/classes
-
-<code>
 public class lsann.attrib.TestDerived2
   extends lsann.attrib.TestDerivedClass{
 
@@ -321,16 +273,6 @@ public class lsann.attrib.TestDerived2
 public class lsann.attrib.TestBaseClass{
 }
 
-</code>  
-</details>
-    
-<hr>
-show all uses of @lsann.attrib.TestAttrib4, including use of derived annotations 
-<details>
-<summary>show all uses of @lsann.attrib.TestAttrib4, including use of derived annotations </summary>
-Command line: java -jar ls-annotations.jar -w @lsann.attrib.TestAttrib ./ls-annotations/build/classes
-
-<code>
 public @interface lsann.attrib.TestAttrib
   implements java.lang.annotation.Annotation{
     public abstract java.lang.String name();
@@ -370,16 +312,6 @@ public @interface lsann.attrib.TestAttrib3
   implements java.lang.annotation.Annotation{
 }
 
-</code>  
-</details>
-    
-<hr>
-show all derived classes of java.lang.Object
-<details>
-<summary>show all derived classes of java.lang.Object</summary>
-Command line: java -jar ls-annotations.jar -l ./ls-annotations/build/classes -d java.lang.Object
-
-<code>
 java.lang.Object
     lsann.AllJarClassVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@300ffa5d
     lsann.AllJarClassVisitors$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1f17ae12
@@ -444,21 +376,9 @@ java.lang.Object
     lsann.graph.HierarchyGraphVisitors$ShowHierarchyVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3eb07fd3
     lsann.util.Pair lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@446cdf90
     lsann.util.StrUtil lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@799f7e29
-</code>  
-</details>
-    
-<hr>
-show all base classes of lsann.attrib.TestDerived2
-<details>
-<summary>show all base classes of lsann.attrib.TestDerived2</summary>
-Command line: java -jar ls-annotations.jar -l ./ls-annotations/build/classes -b lsann.attrib.TestDerived2
-
-<code>
 lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@79fc0f2f
     lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1f17ae12
         lsann.attrib.TestBaseClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@4d405ef7
             java.lang.Object
         lsann.attrib.TestInterface lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
             java.lang.Object
-</code>  
-</details>
