@@ -3,11 +3,13 @@
 ls-annotation is a java bytecode decompiler; it extracts and prints definitions of classes and methods that use java annotations.
 
 The purpose of this tool is to make sense out of declarations with annotations that depend on one another, an example for such things is @Autowire from spring-boot.
-In spring boot a function or constructor parameter that is marked with @Autowire will get the value returned by a function marked with the @Bean annotation, provided that this function
-returns the same type or a derived class as that of the parameter type marked with @Autowire.
+In spring boot a function or constructor parameter that is marked with @Autowire will get the value returned by a function marked with the @Bean or @Component annotation, provided that this function returns the same type or a derived class as that of the parameter type marked with @Autowire, all that on condition that the @Bean class is covered by a @ComponentScan annotation. Now with modern java libraries you get more of this kind of goodness.
 
 The motivation for this tool is to extract all classes/methods that have an annotation - and do so based on the bytecode of a system. I think that searching through the bytecode is very effective way to look at complex java based systems; Searching through the source code is much more limited, often one is faced with the problem of chasing multiple dependencies and their versions (and one might have to do so across multiple source code repositories); one doesn't have this problem when looking at the complete binary byte code representation of a given system.
 
+You can get some of the features of this program in IntelliJ, however this program is a command line utility that produces text reports, so it has its points if you prefer to work with text.
+
+Limitations: this program can recognize annotations included in the byte code, these are annotations marked with the SOURCE or RUNTIME retention policies [link](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html); it can't detect annotations with the CODE retention policy as these are not retained in the bytecode, one example of these is the @Override annotation. 
 
 ## Installation 
 
