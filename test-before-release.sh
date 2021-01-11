@@ -20,7 +20,7 @@ EOF
 
 </pre>
 
-## Examples
+## Example usage
 
 EOF
 
