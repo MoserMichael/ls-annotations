@@ -52,9 +52,9 @@ function run_it {
 <details>
 <summary>${help}</summary>
   
+
 Command: <code>java -jar ls-annotations.jar ${cmd}</code>
 
-Output:
 <pre>
 EOF
 

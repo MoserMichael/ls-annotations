@@ -69,9 +69,9 @@ Commands:
 <details>
 <summary>show all annotations in jar file</summary>
   
+
 Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/libs/ls-annotations.jar</code>
 
-Output:
 <pre>
     File: ./ls-annotations/build/libs/ls-annotations.jar - org/objectweb/asm/ClassReader.class
     
@@ -122,9 +122,9 @@ Output:
 <details>
 <summary>show all annotations in classes within directory (recursive)</summary>
   
+
 Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes</code>
 
-Output:
 <pre>
     File: ./ls-annotations/build/classes/java/test/lsann/AppTest.class
     
@@ -256,9 +256,9 @@ Output:
 <details>
 <summary>show all annotation definitions that are used in definition of annotation @lsann.attrib.TestAttrib4</summary>
   
+
 Command: <code>java -jar ls-annotations.jar -e @lsann.attrib.TestAttrib4 ./ls-annotations/build/classes</code>
 
-Output:
 <pre>
     
     @lsann.attrib.TestAttrib2
@@ -288,9 +288,9 @@ Output:
 <details>
 <summary>show all annotation definitions that extend annotation @lsann.attrib.TestAttrib</summary>
   
+
 Command: <code>java -jar ls-annotations.jar -a @lsann.attrib.TestAttrib ./ls-annotations/build/classes</code>
 
-Output:
 <pre>
     public @interface lsann.attrib.TestAttrib
       implements java.lang.annotation.Annotation{
@@ -327,9 +327,9 @@ Output:
 <details>
 <summary>show all uses of @lsann.attrib.TestAttrib4 with highlight</summary>
   
+
 Command: <code>java -jar ls-annotations.jar -u @lsann.attrib.TestAttrib4 ./ls-annotations/build/classes</code>
 
-Output:
 <pre>
     public class lsann.attrib.TestDerived2
       extends lsann.attrib.TestDerivedClass{
@@ -355,9 +355,9 @@ Output:
 <details>
 <summary>show all uses of @lsann.attrib.TestAttrib4, including use of derived annotations </summary>
   
+
 Command: <code>java -jar ls-annotations.jar -w @lsann.attrib.TestAttrib ./ls-annotations/build/classes</code>
 
-Output:
 <pre>
     public @interface lsann.attrib.TestAttrib
       implements java.lang.annotation.Annotation{
@@ -408,9 +408,9 @@ Output:
 <details>
 <summary>show all derived classes of java.lang.Object</summary>
   
+
 Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -d java.lang.Object</code>
 
-Output:
 <pre>
     java.lang.Object
         lsann.AppTest lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@300ffa5d
@@ -437,9 +437,9 @@ Output:
 <details>
 <summary>show all base classes of lsann.attrib.TestDerived2</summary>
   
+
 Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -b lsann.attrib.TestDerived2</code>
 
-Output:
 <pre>
     lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@79fc0f2f
         lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1f17ae12
