@@ -1,6 +1,6 @@
 ## ls-annotation
 
-ls-annotation is a java bytecode decompiler; it extracts and prints definitions of classes and methods that use java annotations.
+ls-annotation is a java bytecode decompiler; it extracts and prints definitions of classes, methods and fields that use java annotations.
 
 The purpose of this tool is to make sense out of declarations with annotations that depend on one another, an example for this kind of dependencies is @Autowire from Spring Boot:
 In Spring Boot a function that is marked with @Autowire will get the value returned by a function marked with the @Bean annotation, provided that this function
@@ -11,7 +11,7 @@ Now you can have some of the features of following up on annotations in IntelliJ
 
 The motivation for this tool is to extract all classes/methods that have an annotation - and do so based on the bytecode of a system. I think that searching through the bytecode is very effective way to look at complex java based systems; Searching through the source code is much more limited, often one is faced with the problem of chasing multiple dependencies and their versions (and one might have to do so across multiple source code repositories); one doesn't have this problem when looking at the complete binary byte code representation of a given system.
 
-Limitations: this program can detect detect annotations placed into the byte code, it can detect annotations with retention policy CLASS and RUNGIME [link](https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html). It can't detect annotations with retention policy SOURCE that are not put into bytecode, for example @Override is one of these.
+Limitations: this program can detect detect annotations placed into the byte code, it can detect annotations with retention policy CLASS and RUNTIME [link](https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html). It can't detect annotations with retention policy SOURCE that are not put into bytecode, for example @Override is one of these.
 
 ## Installation 
 
