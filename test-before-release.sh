@@ -38,6 +38,7 @@ function run_it {
   if [[ "$error" != "0" ]]; then
     echo "has error"
     cat tmp-file
+    exit 1
   fi
 
   size=$(stat -f '%z' tmp-file)
