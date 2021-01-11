@@ -51,7 +51,7 @@ function run_it {
 <hr>
 <details>
 <summary>${help}</summary>
-
+  
 Command: <code>java -jar ls-annotations.jar ${cmd}</code>
 
 Output:

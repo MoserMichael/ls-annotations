@@ -68,7 +68,7 @@ Commands:
 <hr>
 <details>
 <summary>show all annotations in jar file</summary>
-
+  
 Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/libs/ls-annotations.jar</code>
 
 Output:
@@ -121,7 +121,7 @@ Output:
 <hr>
 <details>
 <summary>show all annotations in classes within directory (recursive)</summary>
-
+  
 Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes</code>
 
 Output:
@@ -255,7 +255,7 @@ Output:
 <hr>
 <details>
 <summary>show all annotation definitions that are used in definition of annotation @lsann.attrib.TestAttrib4</summary>
-
+  
 Command: <code>java -jar ls-annotations.jar -e @lsann.attrib.TestAttrib4 ./ls-annotations/build/classes</code>
 
 Output:
@@ -287,7 +287,7 @@ Output:
 <hr>
 <details>
 <summary>show all annotation definitions that extend annotation @lsann.attrib.TestAttrib</summary>
-
+  
 Command: <code>java -jar ls-annotations.jar -a @lsann.attrib.TestAttrib ./ls-annotations/build/classes</code>
 
 Output:
@@ -326,7 +326,7 @@ Output:
 <hr>
 <details>
 <summary>show all uses of @lsann.attrib.TestAttrib4 with highlight</summary>
-
+  
 Command: <code>java -jar ls-annotations.jar -u @lsann.attrib.TestAttrib4 ./ls-annotations/build/classes</code>
 
 Output:
@@ -354,7 +354,7 @@ Output:
 <hr>
 <details>
 <summary>show all uses of @lsann.attrib.TestAttrib4, including use of derived annotations </summary>
-
+  
 Command: <code>java -jar ls-annotations.jar -w @lsann.attrib.TestAttrib ./ls-annotations/build/classes</code>
 
 Output:
@@ -407,7 +407,7 @@ Output:
 <hr>
 <details>
 <summary>show all derived classes of java.lang.Object</summary>
-
+  
 Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -d java.lang.Object</code>
 
 Output:
@@ -436,7 +436,7 @@ Output:
 <hr>
 <details>
 <summary>show all base classes of lsann.attrib.TestDerived2</summary>
-
+  
 Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -b lsann.attrib.TestDerived2</code>
 
 Output:
