@@ -49,11 +49,12 @@ function run_it {
   cat <<EOF >>README.md  
     
 <hr>
-${help}
 <details>
 <summary>${help}</summary>
-Command line: java -jar ls-annotations.jar ${cmd}
 
+Command: <code>java -jar ls-annotations.jar ${cmd}</code>
+
+Output:
 <pre>
 EOF
 
