@@ -220,7 +220,7 @@ public class App {
                 "\n" +
                 "Commands:\n" +
                 " -l               List all annotated classes or methods and show the annotations\n" +
-                " --list" +
+                " --list\n" +
                 "\n" +
                 "  -c              show constructors for classes with annotations (for -l)\n" +
                 "  --showctor\n" +

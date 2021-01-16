@@ -41,6 +41,7 @@ Common Arguments:
 Commands:
  -l               List all annotated classes or methods and show the annotations
  --list
+
   -c              show constructors for classes with annotations (for -l)
   --showctor
 
