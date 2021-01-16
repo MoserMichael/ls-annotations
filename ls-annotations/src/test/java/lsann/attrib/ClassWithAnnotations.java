@@ -25,6 +25,9 @@ import org.springframework.stereotype.Component;
                         classes = AutoConfigurationExcludeFilter.class) })
 public class ClassWithAnnotations {
 
+    public ClassWithAnnotations(String a, String b, int c, boolean d) {
+    }
+
     @Bean
     public ClassWithAnnotations outgoingMessageBuilderFactory(
             @Autowired List<String> aaa,

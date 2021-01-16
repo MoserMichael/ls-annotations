@@ -135,6 +135,9 @@ public class App {
             if (arg.equals("-l") || arg.equals("--list")) {
                 command = CMD_ANNOTATIONS_LS;
             }
+            else if (arg.equals("-c") || arg.equals("--showctor")) {
+                System.setProperty("lsann.showctor", "1");
+            }
             else if (arg.equals("-n") || arg.equals("--names")) {
                 command = CMD_SHOW_NAMES;
             }
@@ -203,7 +206,7 @@ public class App {
     }
 
     private void printHelp() {
-        System.err.println("java -jar ls-annotations [[-l|--list] className|[-b|--baseOf] className]|[[-d|--derivedOf]] [--scanRec|-r] [<directory>|<jar file>]*\n" +
+        System.err.println("java -jar ls-annotations.jar [[-l|--list] className|[-b|--baseOf] className]|[[-d|--derivedOf]] [--scanRec|-r] [<directory>|<jar file>]*\n" +
                 "\n" +
                 "Display all definitions with annotations\n" +
                 "it works by scans by decompiling the bytecode of class files selectively to shows all definitions with annotations.\n" +
@@ -216,8 +219,11 @@ public class App {
                 " -v                (debug) very verbose, trace objectweb events\n" +
                 "\n" +
                 "Commands:\n" +
-                " --l               List all annotated classes or methods and show the annotations\n" +
+                " -l               List all annotated classes or methods and show the annotations\n" +
                 " --list" +
+                "\n" +
+                "  -c              show constructors for classes with annotations (for -l)\n" +
+                "  --showctor\n" +
                 "\n" +
                  " -d <n>            List all derived classes or interfaces of class/interface <n>\n" +
                  " --derivedClassOf <n>\n" +

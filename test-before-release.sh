@@ -85,6 +85,8 @@ run_it "-l ./ls-annotations/build/libs/ls-annotations.jar" "show all annotations
 
 run_it "-l ./ls-annotations/build/classes" "show all annotations in classes within directory (recursive)"
 
+run_it "-l ./ls-annotations/build/classes -c" "show all annotations in classes within directory (recursive), show constructor on classes with annotations"
+
 run_it "-e @lsann.attrib.TestAttrib4 ./ls-annotations/build/classes" "show all annotation definitions that are used in definition of annotation @lsann.attrib.TestAttrib4"
 
 run_it "-a @lsann.attrib.TestAttrib ./ls-annotations/build/classes" "show all annotation definitions that extend annotation @lsann.attrib.TestAttrib"

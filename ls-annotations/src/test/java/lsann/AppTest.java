@@ -14,6 +14,7 @@ public class AppTest {
 
         //int mask = 0x21;
         //System.out.printf("access mask: 0x%x val: %s\n", mask, AsmAccessNames.get(mask, AsmAccessNames.SCOPE_CLASS) );
+        System.out.println("list annotations in ./build/classes");
 
         try {
             JarReader jutil = new JarReader(false);
@@ -22,6 +23,28 @@ public class AppTest {
             ex.printStackTrace();
             Assert.fail();
         }
+    }
+
+    @Test
+    public void testScanAnnotationsAndShowCtor() {
+        //System.setProperty("lsann.visitclass.verbose", "1");
+
+        //int mask = 0x21;
+        //System.out.printf("access mask: 0x%x val: %s\n", mask, AsmAccessNames.get(mask, AsmAccessNames.SCOPE_CLASS) );
+
+        System.out.println("\nlist annotations in ./build/classes and show constructor on classes with annotation\n");
+
+        System.setProperty  ("lsann.showctor","1");
+        try {
+            JarReader jutil = new JarReader(false);
+            jutil.process("./build/classes", new AllJarClassVisitors.LsAnnotationJarClassVisitor());
+        } catch (java.io.IOException ex) {
+            ex.printStackTrace();
+            Assert.fail();
+        }
+        System.clearProperty("lsann.showctor");
+        assert(System.getProperty  ("lsann.showctor") == null);
+
     }
 
     @Test

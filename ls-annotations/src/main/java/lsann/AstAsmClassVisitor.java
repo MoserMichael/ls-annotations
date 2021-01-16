@@ -357,12 +357,25 @@ public class AstAsmClassVisitor extends ClassVisitor {
     private AstDefinition.RepBase onVisitEnd() {
         AstDefinition.RepBase base = astStack.removeLast();
         AstDefinition.ClassRep classRep = ((AstDefinition.ClassRep)astStack.getFirst());
-        if (base.mustDisplay() || classRep.definesAnnotation()) {
+        if (base.mustDisplay() || classRep.definesAnnotation() ||
+                (isCtor(base) && classRep.annotations != null && showCtorOnClassWithAnnotation())) {
             base.parentDecl = astStack.getFirst();
-            ((AstDefinition.ClassRep)astStack.getFirst()).add(base);
+            classRep.add(base);
             return base;
         }
         return null;
+    }
+
+    private boolean isCtor(AstDefinition.RepBase base) {
+        if (base.getClass() == AstDefinition.MethodRep.class) {
+            AstDefinition.MethodRep method = (AstDefinition.MethodRep) base;
+            return method.name.equals("<init>");
+        }
+        return false;
+    }
+
+    private boolean showCtorOnClassWithAnnotation() {
+        return System.getProperty("lsann.showctor") != null;
     }
 
 
