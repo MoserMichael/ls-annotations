@@ -117,7 +117,7 @@ Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/libs/ls-an
         public static final deprecated int ASM10_EXPERIMENTAL = 17432576;}
     
 
-<pre>  
+</pre>  
   
 </details>
 
@@ -255,7 +255,7 @@ Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes</c
     }
     
 
-<pre>  
+</pre>  
   
 </details>
 
@@ -402,7 +402,7 @@ Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -c
     }
     
 
-<pre>  
+</pre>  
   
 </details>
 
@@ -434,7 +434,7 @@ Command: <code>java -jar ls-annotations.jar -e @lsann.attrib.TestAttrib4 ./ls-an
     }
     
 
-<pre>  
+</pre>  
   
 </details>
 
@@ -473,7 +473,7 @@ Command: <code>java -jar ls-annotations.jar -a @lsann.attrib.TestAttrib ./ls-ann
     }
     
 
-<pre>  
+</pre>  
   
 </details>
 
@@ -501,7 +501,7 @@ Command: <code>java -jar ls-annotations.jar -u @lsann.attrib.TestAttrib4 ./ls-an
     }
     
 
-<pre>  
+</pre>  
   
 </details>
 
@@ -554,7 +554,7 @@ Command: <code>java -jar ls-annotations.jar -w @lsann.attrib.TestAttrib ./ls-ann
     }
     
 
-<pre>  
+</pre>  
   
 </details>
 
@@ -632,7 +632,7 @@ Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -d
         lsann.util.Pair lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@446cdf90
         lsann.util.StrUtil lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@799f7e29
 
-<pre>  
+</pre>  
   
 </details>
 
@@ -652,7 +652,7 @@ Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -b
             lsann.attrib.TestInterface lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
                 java.lang.Object
 
-<pre>  
+</pre>  
   
 </details>
 

@@ -70,7 +70,7 @@ EOF
 
   cat <<EOF >>README.md
 
-<pre>  
+</pre>  
   
 </details>
 
