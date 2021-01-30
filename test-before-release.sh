@@ -103,4 +103,7 @@ run_it "-l ./ls-annotations/build/classes -d java.lang.Object" "show all derived
 
 run_it "-l ./ls-annotations/build/classes -b lsann.attrib.TestDerived2" "show all base classes of lsann.attrib.TestDerived2"
 
+cat README-eof.md.template >>README.md
+
+
 echo "** test ok **"

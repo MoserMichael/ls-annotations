@@ -1,0 +1,11 @@
+## what i learned while writing this project
+
+I wrote this tool as part of relearning java; java8 is quite an improvement over the old java that i used to work with. It took me some time and practice to get used to java streams. I think that the streams library was very much inspired by Scala futures.
+
+This tool uses the [asm library](https://asm.ow2.io/) to scan class files and to extract annotations. you need to pass an event listener object to the asm library that derives from an event abstract base class and not from an interface in order to specify the aspects that you want to process; now it turns out that java abstract classes are much more versatile than interfaces.
+
+Overall i was surprised at the many changes in the java language that took place during the last decade, or so. I think Scala is loosing a bit of it's edge over java as a result. Now it turns out that they got Kotlin nowadays as a better/functional java, and it sort of wins over Scala due to better interoperability with java: Android picked Kotlin as it's most favoured language, because they just can't switch easily to a newer Jdk and language version, whereas kotlin is adding many of the newer language features that were inspired by scala and its functional programming style. 
+
+However kotlin doesn't have quite the same as the powerful pattern matching statements as Scala; actually Scala took this feature from OCaml. Also Kotlin doesn't have the implicit feature, which I think is a win because implicit doesn't help to produce more readable code.
+
+So many changes in JDK land. Some ten years ago Java seemed to be old and settled in its ways, now after a ten years brake everything looks quite different...
