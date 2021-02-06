@@ -10,6 +10,8 @@ public class HierarchyGraphVisitors {
 
         @Override
         public void visit(String entryName, EntryData entryData, int nestingLevel) {
+            //System.out.printf("%s%s\n", nestingPrefix(nestingLevel), entryName);
+
             if (entryData != null) {
                 ClassHierarchyAsmClassVisitor.ClassEntryData centry = (ClassHierarchyAsmClassVisitor.ClassEntryData) entryData;
                 System.out.printf("%s%s %s\n", nestingPrefix(nestingLevel), entryName, entryData.toString());

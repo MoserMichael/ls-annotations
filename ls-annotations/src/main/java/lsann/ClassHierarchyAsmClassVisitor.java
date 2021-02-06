@@ -10,12 +10,20 @@ public class ClassHierarchyAsmClassVisitor extends ClassVisitor  {
     private HierarchyGraph<ClassEntryData, Object> hierarchy = new HierarchyGraph<ClassEntryData, Object>();
 
     public static class ClassEntryData {
-        private boolean isInterface;
+        //private boolean isInterface;
         private int access;
 
         ClassEntryData(int access) {
-            this.isInterface = isInterface;
+           // this.isInterface = isInterface;
             this.access = access;
+        }
+
+        public String toString() {
+            String name = AsmAccessNames.get(this.access, AsmAccessNames.SCOPE_CLASS);
+            if (name.equals("")) {
+                return "";
+            }
+            return "[" + name + "]";
         }
     }
 

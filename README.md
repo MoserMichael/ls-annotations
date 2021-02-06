@@ -568,69 +568,69 @@ Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -d
 
 <pre>
     java.lang.Object
-        lsann.AllJarClassVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@300ffa5d
-        lsann.AllJarClassVisitors$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1f17ae12
-        lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@4d405ef7
-        lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowAnnotationUsage lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
-        lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowUsageRecursive lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e817b38
-        lsann.AppTest lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@c4437c4
-        lsann.AstDefinition lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@433c675d
-        lsann.AstDefinition$AnnotationBaseRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3f91beef
-            lsann.AstDefinition$AnnotationCompoundRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1a6c5a9e
-                lsann.AstDefinition$AnnotationArrayRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@37bba400
-                lsann.AstDefinition$AnnotationRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@179d3b25
-                    lsann.AstDefinition$AnnotationNestedRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@254989ff
-            lsann.AstDefinition$AnnotationEnumValRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5d099f62
-            lsann.AstDefinition$AnnotationValueRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@37f8bb67
-        lsann.AstDefinition$RepBase lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@49c2faae
-            lsann.AstDefinition$ClassRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@20ad9418
-            lsann.AstDefinition$FieldRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@31cefde0
-            lsann.AstDefinition$MethodParamRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@439f5b3d
-            lsann.AstDefinition$MethodRep lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1d56ce6a
-        lsann.AstVisitorEvents lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5197848c
-            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$AnnoDeclGraphAstVisitorEvents lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@17f052a3
-            lsann.AllJarClassVisitors$LsAnnotationJarClassVisitor$LsAstVisitorEvents lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e0fa5d3
-        lsann.ClassHierarchyAsmClassVisitor$ClassEntryData lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5010be6
-        lsann.SpringBootAutowireAnalyser lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@685f4c2e
-        lsann.asmtools.AsmAccessNames lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@7daf6ecc
-        lsann.asmtools.AsmAccessNames$Entry lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e5d6d97
-        lsann.asmtools.SigParse lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@238e0d81
-        lsann.asmtools.SigParse$PosParse lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@31221be2
-        lsann.asmtools.TracingVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@377dca04
-        lsann.attrib.ClassWithAnnotations lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@728938a9
-        lsann.attrib.ClassWithAnnotations$NestedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@21b8d17c
-        lsann.attrib.ClassWithAnnotations$NestedClass$NestedLevelTwoClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6433a2
-        lsann.attrib.TestAttrib lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5910e440
-        lsann.attrib.TestAttrib2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6267c3bb
-        lsann.attrib.TestAttrib3 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@533ddba
-        lsann.attrib.TestAttrib4 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@246b179d
-        lsann.attrib.TestBaseClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@7a07c5b4
-            lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@26a1ab54
-                lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3d646c37
-        lsann.attrib.TestInterface lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@41cf53f9
-            lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@26a1ab54
-                lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3d646c37
-        lsann.cmd.App lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5a10411
-        lsann.fileio.JarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2ef1e4fa
-            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@306a30c7
-            lsann.AllJarClassVisitors$ClassHierarchyJarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@b81eda8
-            lsann.AllJarClassVisitors$LsAnnotationJarClassVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@68de145
-            lsann.cmd.App$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@27fa135a
-        lsann.fileio.JarReader lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@46f7f36a
-        lsann.fileio.JarReader$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@421faab1
-        lsann.fileio.JarReader$PathName lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2b71fc7e
-        lsann.graph.HierarchyGraph lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@5ce65a89
-        lsann.graph.HierarchyGraph$Entry lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@25f38edc
-        lsann.graph.HierarchyGraph$HierarchyGraphVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1a86f2f1
-            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$1 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@4d405ef7
-            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowAnnotationUsage lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
-            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowUsageRecursive lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@2e817b38
-            lsann.graph.HierarchyGraphVisitors$ShowHierarchyVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3eb07fd3
-        lsann.graph.HierarchyGraph$LinkEntry lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@506c589e
-        lsann.graph.HierarchyGraphVisitors lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@69d0a921
-        lsann.graph.HierarchyGraphVisitors$ShowHierarchyVisitor lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@3eb07fd3
-        lsann.util.Pair lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@446cdf90
-        lsann.util.StrUtil lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@799f7e29
+        lsann.AllJarClassVisitors [public class]
+        lsann.AllJarClassVisitors$1 [class]
+        lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$1 [class]
+        lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowAnnotationUsage [public class]
+        lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowUsageRecursive [public class]
+        lsann.AppTest [public class]
+        lsann.AstDefinition [public class]
+        lsann.AstDefinition$AnnotationBaseRep [public abstract class]
+            lsann.AstDefinition$AnnotationCompoundRep [public class]
+                lsann.AstDefinition$AnnotationArrayRep [public class]
+                lsann.AstDefinition$AnnotationRep [public class]
+                    lsann.AstDefinition$AnnotationNestedRep [public class]
+            lsann.AstDefinition$AnnotationEnumValRep [public class]
+            lsann.AstDefinition$AnnotationValueRep [public class]
+        lsann.AstDefinition$RepBase [public abstract class]
+            lsann.AstDefinition$ClassRep [public class]
+            lsann.AstDefinition$FieldRep [public class]
+            lsann.AstDefinition$MethodParamRep [public class]
+            lsann.AstDefinition$MethodRep [public class]
+        lsann.AstVisitorEvents [public abstract class]
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$AnnoDeclGraphAstVisitorEvents [class]
+            lsann.AllJarClassVisitors$LsAnnotationJarClassVisitor$LsAstVisitorEvents [class]
+        lsann.ClassHierarchyAsmClassVisitor$ClassEntryData [public class]
+        lsann.SpringBootAutowireAnalyser [public class]
+        lsann.asmtools.AsmAccessNames [public class]
+        lsann.asmtools.AsmAccessNames$Entry [class]
+        lsann.asmtools.SigParse [public class]
+        lsann.asmtools.SigParse$PosParse [class]
+        lsann.asmtools.TracingVisitors [public class]
+        lsann.attrib.ClassWithAnnotations [public class]
+        lsann.attrib.ClassWithAnnotations$NestedClass [public class]
+        lsann.attrib.ClassWithAnnotations$NestedClass$NestedLevelTwoClass [public class]
+        lsann.attrib.TestAttrib [public abstract @interface interface]
+        lsann.attrib.TestAttrib2 [public abstract @interface interface]
+        lsann.attrib.TestAttrib3 [public abstract @interface interface]
+        lsann.attrib.TestAttrib4 [public abstract @interface interface]
+        lsann.attrib.TestBaseClass [public class]
+            lsann.attrib.TestDerivedClass [public class]
+                lsann.attrib.TestDerived2 [public class]
+        lsann.attrib.TestInterface [public abstract interface]
+            lsann.attrib.TestDerivedClass [public class]
+                lsann.attrib.TestDerived2 [public class]
+        lsann.cmd.App [public class]
+        lsann.fileio.JarClassVisitor [public abstract class]
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor [public class]
+            lsann.AllJarClassVisitors$ClassHierarchyJarClassVisitor [public class]
+            lsann.AllJarClassVisitors$LsAnnotationJarClassVisitor [public class]
+            lsann.cmd.App$1 [class]
+        lsann.fileio.JarReader [public class]
+        lsann.fileio.JarReader$1 [class]
+        lsann.fileio.JarReader$PathName [class]
+        lsann.graph.HierarchyGraph [public class]
+        lsann.graph.HierarchyGraph$Entry [public class]
+        lsann.graph.HierarchyGraph$HierarchyGraphVisitor [public abstract interface]
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$1 [class]
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowAnnotationUsage [public class]
+            lsann.AllJarClassVisitors$AnnoDeclGraphJarClassVisitor$ShowUsageRecursive [public class]
+            lsann.graph.HierarchyGraphVisitors$ShowHierarchyVisitor [public class]
+        lsann.graph.HierarchyGraph$LinkEntry [class]
+        lsann.graph.HierarchyGraphVisitors [public class]
+        lsann.graph.HierarchyGraphVisitors$ShowHierarchyVisitor [public class]
+        lsann.util.Pair [public class]
+        lsann.util.StrUtil [public class]
 
 </pre>  
   
@@ -645,11 +645,11 @@ Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -d
 Command: <code>java -jar ls-annotations.jar -l ./ls-annotations/build/classes -b lsann.attrib.TestDerived2</code>
 
 <pre>
-    lsann.attrib.TestDerived2 lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@79fc0f2f
-        lsann.attrib.TestDerivedClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@1f17ae12
-            lsann.attrib.TestBaseClass lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@4d405ef7
+    lsann.attrib.TestDerived2 [public class]
+        lsann.attrib.TestDerivedClass [public class]
+            lsann.attrib.TestBaseClass [public class]
                 java.lang.Object
-            lsann.attrib.TestInterface lsann.ClassHierarchyAsmClassVisitor$ClassEntryData@6193b845
+            lsann.attrib.TestInterface [public abstract interface]
                 java.lang.Object
 
 </pre>  
